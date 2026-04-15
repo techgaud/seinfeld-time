@@ -25,9 +25,9 @@ function tick() {
 		pad(d.getUTCDate()) +
 		' ' +
 		pad(d.getUTCHours()) +
-		',' +
+		':' +
 		pad(d.getUTCMinutes()) +
-		',' +
+		':' +
 		pad(d.getUTCSeconds()) +
 		' UTC';
 }
