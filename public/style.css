@@ -50,12 +50,12 @@ h1 {
 	margin: 2rem 0;
 }
 
-.era {
-	font-family: var(--mono);
-	font-size: 1.25rem;
-	letter-spacing: 0.3em;
-	color: var(--accent);
-	margin-bottom: 0.5rem;
+.readout {
+	display: flex;
+	align-items: baseline;
+	justify-content: center;
+	gap: 0.75rem;
+	flex-wrap: wrap;
 }
 
 .count {
@@ -66,12 +66,47 @@ h1 {
 	line-height: 1;
 }
 
+.era {
+	font-family: var(--mono);
+	font-size: clamp(1rem, 3vw, 1.75rem);
+	letter-spacing: 0.3em;
+	color: var(--accent);
+	font-weight: 700;
+}
+
 .unit {
 	font-family: var(--mono);
 	color: var(--muted);
 	font-size: 1rem;
 	margin-top: 0.5rem;
 	letter-spacing: 0.2em;
+}
+
+.legend {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	margin: 1.5rem 0 0;
+	font-family: var(--mono);
+	font-size: 0.85rem;
+}
+
+.legend > div {
+	display: flex;
+	align-items: baseline;
+	gap: 0.5rem;
+}
+
+.legend dt {
+	color: var(--accent);
+	font-weight: 700;
+	letter-spacing: 0.15em;
+	margin: 0;
+}
+
+.legend dd {
+	color: var(--muted);
+	margin: 0;
 }
 
 .now {
