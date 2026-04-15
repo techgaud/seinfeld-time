@@ -31,11 +31,27 @@
 			</section>
 			<section class="api">
 				<h2>API</h2>
-				<p>Convert any moment to Seinfeld time.</p>
-				<pre><code>GET /api/hello,newman
-GET /api/hello,jerry?iso=2026-04-15T12:00:00Z
-GET /api/hello,jerry?epoch=1776556800</code></pre>
-				<p class="aside">In TCP, SYN initiates and ACK acknowledges. Here, <code>hello,newman</code> is the SYN, <code>hello,jerry</code> is the ACK.</p>
+				<p>Convert any moment to Seinfeld time. In TCP, SYN initiates and ACK acknowledges. Here, <code>hello,newman</code> is the SYN, <code>hello,jerry</code> is the ACK.</p>
+
+				<h3>1. Current moment in Seinfeld time (the SYN)</h3>
+				<pre><code>GET /api/hello,newman</code></pre>
+				<pre><code>curl 'https://seinfeldtime.com/api/hello,newman'</code></pre>
+
+				<h3>2. Convert an ISO timestamp (the ACK). Y2K midnight UTC, well into the ASS era.</h3>
+				<pre><code>GET /api/hello,jerry?iso=2000-01-01T00:00:00Z</code></pre>
+				<pre><code>curl 'https://seinfeldtime.com/api/hello,jerry?iso=2000-01-01T00:00:00Z'</code></pre>
+
+				<h3>3. Convert by epoch seconds. Unix epoch itself, deep in BS.</h3>
+				<pre><code>GET /api/hello,jerry?epoch=0</code></pre>
+				<pre><code>curl 'https://seinfeldtime.com/api/hello,jerry?epoch=0'</code></pre>
+
+				<h3>4. The pilot moment itself. Should return seinfeld_seconds 0, era ASS.</h3>
+				<pre><code>GET /api/hello,jerry?iso=1989-07-06T01:00:00Z</code></pre>
+				<pre><code>curl 'https://seinfeldtime.com/api/hello,jerry?iso=1989-07-06T01:00:00Z'</code></pre>
+
+				<h3>5. The finale air date, May 14, 1998 9pm EDT. Ought to land around 280 million ASS seconds.</h3>
+				<pre><code>GET /api/hello,jerry?iso=1998-05-15T01:00:00Z</code></pre>
+				<pre><code>curl 'https://seinfeldtime.com/api/hello,jerry?iso=1998-05-15T01:00:00Z'</code></pre>
 			</section>
 		</main>
 		<script src="/clock.js"></script>
