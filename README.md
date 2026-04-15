@@ -7,7 +7,7 @@ Live at https://seinfeldtime.com
 Two eras.
 
 - **BS** Before Seinfeld
-- **ASS** After Seinfeld
+- **ASS** After Seinfeld Show
 
 ## API
 
