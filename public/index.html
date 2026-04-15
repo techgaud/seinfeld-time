@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Seinfeld Time</title>
+		<meta
+			name="description"
+			content="Seconds before and after the first public airing of Seinfeld. The show about nothing, measured in everything."
+		/>
+		<link rel="stylesheet" href="/style.css" />
+	</head>
+	<body>
+		<main>
+			<h1>Seinfeld Time</h1>
+			<p class="tag">Counting from <time datetime="1989-07-06T01:00:00Z">1989-07-06 01:00:00 UTC</time>, the first airing of <em>The Seinfeld Chronicles</em>.</p>
+			<section id="clock" aria-live="polite">
+				<div class="era" id="era">ASS</div>
+				<div class="count" id="count">0</div>
+				<div class="unit">seconds</div>
+			</section>
+			<section class="now">
+				<div class="now-label">UTC right now</div>
+				<div class="now-value" id="utc">,</div>
+			</section>
+			<section class="api">
+				<h2>API</h2>
+				<p>Convert any moment to Seinfeld time.</p>
+				<pre><code>GET /api/hello,newman
+GET /api/hello,jerry?iso=2026-04-15T12:00:00Z
+GET /api/hello,jerry?epoch=1776556800</code></pre>
+				<p class="aside">In TCP, SYN initiates and ACK acknowledges. Here, <code>hello,newman</code> is the SYN, <code>hello,jerry</code> is the ACK.</p>
+			</section>
+		</main>
+		<script src="/clock.js"></script>
+	</body>
+</html>
